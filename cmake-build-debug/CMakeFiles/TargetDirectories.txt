@@ -1,0 +1,3 @@
+C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED/cmake-build-debug/CMakeFiles/Projeto_ED.dir
+C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED/cmake-build-debug/CMakeFiles/rebuild_cache.dir
