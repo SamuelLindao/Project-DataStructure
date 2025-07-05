@@ -4,13 +4,21 @@
 
 void inicializar(Lista *lista){
     lista->tam=0;
+    lista->capacidade=20;
+    lista->itens = malloc(lista->capacidade * sizeof(int));
 }
 void inserir(Lista *lista, int valor){
-    if(lista->tam < MAX){
-        lista->itens[lista->tam++] = valor;
-    }else{
-        printf("Lista cheia\n");
+    if(lista->tam == lista->capacidade ){
+        lista->capacidade *=2;
+        int *novo = realloc(lista->itens,lista->capacidade * sizeof(int));
+        if(novo == NULL){
+            printf("Erro ao alocar memória");
+            free(lista->itens);
+            exit(EXIT_FAILURE);
+        }
+        lista->itens = novo;
     }
+    lista->itens[lista->tam++] = valor;
 }
 void excluir(Lista *lista,int valor){
     for(int i=0;i<lista->tam;i++){
@@ -25,7 +33,6 @@ void excluir(Lista *lista,int valor){
     }
     printf("Valor não encontrado\n");
 }
-
 bool buscar(Lista *lista,int valor){
     for(int i=0;i<lista->tam;i++){
         if(lista->itens[i]==valor){
@@ -33,6 +40,12 @@ bool buscar(Lista *lista,int valor){
         }
     }
     return false;
+}
+void libera_lista(Lista *lista){
+    free(lista->itens);
+    lista->itens = NULL;
+    lista->tam = 0;
+    lista->capacidade = 0;
 }
 void exibirLista(Lista *lista){
     for(int i = 0;i<lista->tam;i++){
