@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED/cmake-build-debug"
+			"value" : "c:/Users/lacer/OneDrive/Desktop/Projeto-ED/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -447,7 +447,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/lacer/OneDrive/Desktop/Projeto-ED/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -519,7 +519,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED"
+			"value" : "C:/Users/lacer/OneDrive/Desktop/Projeto-ED"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED/cmake-build-debug"
+			"value" : "C:/Users/lacer/OneDrive/Desktop/Projeto-ED/cmake-build-debug"
 		},
 		{
 			"name" : "Projeto_ED_IS_TOP_LEVEL",
@@ -1175,7 +1175,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/lacer/CLionProjects/DataStructure-UESC/Projeto-ED"
+			"value" : "C:/Users/lacer/OneDrive/Desktop/Projeto-ED"
 		},
 		{
 			"name" : "_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED",
