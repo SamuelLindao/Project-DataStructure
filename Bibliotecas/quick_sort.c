@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "quicksort.h"
+#include "quick_sort.h"
 
 void trocar(int *a,int *b){
     int temp = *a;

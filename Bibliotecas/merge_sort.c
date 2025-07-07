@@ -1,4 +1,4 @@
-#include "mergesort.h"
+#include "merge_sort.h"
 
 void mesclar(int vetor[], int inicio, int meio, int fim) {
     int n1 = meio - inicio + 1;
