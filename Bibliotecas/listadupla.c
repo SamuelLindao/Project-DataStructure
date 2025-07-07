@@ -3,8 +3,8 @@
 #include <string.h>
 #include "listadupla.h"
 
-Lista* insere_comeco(char* nome, int numero, Lista* no){
-    Lista* novo_no = (Lista*)malloc(sizeof(Lista));
+ListaD* insere_comeco(char* nome, int numero, ListaD* no){
+    ListaD* novo_no = (ListaD*)malloc(sizeof(ListaD));
     if (novo_no == NULL) {
         printf("Erro ao alocar memória");
         exit(1);
@@ -21,12 +21,12 @@ Lista* insere_comeco(char* nome, int numero, Lista* no){
     return novo_no;
 }
 
-Lista* insere_final(char* nome, int numero, Lista* no){
+ListaD* insere_final(char* nome, int numero, ListaD* no){
     if (no == NULL) {
         return insere_comeco(nome, numero, no);
     }
-    Lista* aux_no = no;
-    Lista* novo_no = (Lista*)malloc(sizeof(Lista));
+    ListaD* aux_no = no;
+    ListaD* novo_no = (ListaD*)malloc(sizeof(ListaD));
     if (novo_no == NULL) {
         printf("Erro ao alocar memória");
         exit(1);
@@ -43,7 +43,7 @@ Lista* insere_final(char* nome, int numero, Lista* no){
     return no;
 }
 
-Lista* procura_por_nome(char* nome, Lista* no){
+ListaD* procura_por_nome(char* nome, ListaD* no){
     if (no == NULL){
         return NULL;
     }
@@ -56,13 +56,13 @@ Lista* procura_por_nome(char* nome, Lista* no){
     return NULL;
 }
 
-Lista* remove_por_nome(char* nome, Lista* no){
-    Lista* escolhido = procura_por_nome(nome, no);
+ListaD* remove_por_nome(char* nome, ListaD* no){
+    ListaD* escolhido = procura_por_nome(nome, no);
     if (escolhido == NULL){
         return no;
     }
     if (escolhido == no){
-        Lista* prox_no = no->prox;
+        ListaD* prox_no = no->prox;
         free(escolhido);
         if (prox_no != NULL) {
             prox_no->ant = NULL;
@@ -81,15 +81,15 @@ Lista* remove_por_nome(char* nome, Lista* no){
     }
 }
 
-void libera_lista(Lista *no){
+void libera_lista_dupla(ListaD *no){
     while (no != NULL){
-        Lista* temp = no;
+        ListaD* temp = no;
         no = no->prox;
         free(temp);
     }
 }
 
-void mostra_lista(Lista* no){
+void mostra_lista(ListaD* no){
     if (no == NULL){
         printf("LISTA VAZIA\n");
         return;

@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 /**
- * @struct Lista
+ * @struct ListaV
  * @brief  Lista dinâmica de inteiros com tamanho máximo definido por MAX.
  *
  * Campos:
@@ -15,14 +15,14 @@ typedef struct{
     int *itens;
     int tam;
     int capacidade;
-}Lista;
+}ListaV;
 
 /**
  * @brief Inicializa a lista tornando seu tamanho zero.
  *
  * @param lista ponteiro para a estrutura que será inicializada.
  */
-void inicializar(Lista *lista);
+void inicializar_vetor(ListaV *lista);
 
 /**
  * @brief Insere um valor no final da lista, se houver espaço.
@@ -30,7 +30,7 @@ void inicializar(Lista *lista);
  * @param lista Ponteiro para a estrutura do tipo Lista onde o valor será adicionado.
  * @param valor Valor inteiro que será adicionado.
  */
-void inserir(Lista *lista,int valor);
+void inserir_vetor(ListaV *lista,int valor);
 
 /**
  * @brief Exclui o primeiro valor indicado no parâmetro.
@@ -38,7 +38,7 @@ void inserir(Lista *lista,int valor);
  * @param lista Ponteiro para a lista onde o valor será excluido.
  * @param valor Valor inteiro que será excluido.
  */
-void excluir(Lista *lista,int valor);
+void excluir(ListaV *lista,int valor);
 
 /**
  * @brief Busca um valor na lista.
@@ -47,20 +47,20 @@ void excluir(Lista *lista,int valor);
  * @param valor Valor inteiro que será buscado.
  * @return true se o valor existir na lista; senão false.
  */
-bool buscar(Lista *lista,int valor);
+bool buscar_vetor(ListaV *lista,int valor);
 
 /**
  * @brief Libera o array alocado e muda os campos da lista para um padrão.
  *
  * @param lista Ponteiro da lista que será liberada.
  */
-void libera_lista(Lista *lista);
+void libera_lista_vetor(ListaV *lista);
 
 /**
  * @brief Exibe todos os elementos da lista.
  *
  * @param lista Ponteiro da lista que será exibida.
  */
-void exibirLista(Lista *lista);
+void exibirLista(ListaV *lista);
 
 #endif

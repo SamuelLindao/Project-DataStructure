@@ -4,7 +4,7 @@
 #define TAM_NOME 100
 
 /**
- * @struct Lista
+ * @struct ListaD
  * @brief Estrutura que representa um nó de uma lista duplamente encadeada.
  *
  * Campos:
@@ -18,7 +18,7 @@ typedef struct lista {
     int numero;
     struct lista* prox;
     struct lista* ant;
-} Lista;
+} ListaD;
 
 /**
  * @brief Insere um novo nó no início da lista.
@@ -28,7 +28,7 @@ typedef struct lista {
  * @param no Ponteiro para o primeiro nó atual da lista.
  * @return Ponteiro para o novo primeiro nó da lista.
  */
-Lista* insere_comeco(char* nome, int numero, Lista* no);
+ListaD* insere_comeco(char* nome, int numero, ListaD* no);
 
 /**
  * @brief Insere um novo nó no final da lista.
@@ -38,7 +38,7 @@ Lista* insere_comeco(char* nome, int numero, Lista* no);
  * @param no Ponteiro para o primeiro nó atual da lista.
  * @return Ponteiro para o primeiro nó da lista (inicial).
  */
-Lista* insere_final(char* nome, int numero, Lista* no);
+ListaD* insere_final(char* nome, int numero, ListaD* no);
 
 /**
  * @brief Procura um nó da lista que contenha o nome indicado.
@@ -47,7 +47,7 @@ Lista* insere_final(char* nome, int numero, Lista* no);
  * @param no Ponteiro para o primeiro nó da lista.
  * @return Ponteiro para o nó encontrado, ou NULL se não existir.
  */
-Lista* procura_por_nome(char* nome, Lista* no);
+ListaD* procura_por_nome(char* nome, ListaD* no);
 
 /**
  * @brief Remove o primeiro nó encontrado com o nome indicado.
@@ -56,20 +56,20 @@ Lista* procura_por_nome(char* nome, Lista* no);
  * @param no Ponteiro para o primeiro nó da lista.
  * @return Ponteiro para o primeiro nó da lista após a remoção.
  */
-Lista* remove_por_nome(char* nome, Lista* no);
+ListaD* remove_por_nome(char* nome, ListaD* no);
 
 /**
  * @brief Libera todos os nós da lista, desalocando memória.
  *
  * @param no Ponteiro para o primeiro nó da lista.
  */
-void libera_lista(Lista* no);
+void libera_lista_dupla(ListaD* no);
 
 /**
  * @brief Exibe todos os nós da lista com seus respectivos dados.
  *
  * @param no Ponteiro para o primeiro nó da lista.
  */
-void mostra_lista(Lista* no);
+void mostra_lista(ListaD* no);
 
 #endif // LISTADUPLA_H
