@@ -44,40 +44,37 @@ Lista* insere_final(char* nome, int numero, Lista* no){
 }
 
 Lista* procura_por_nome(char* nome, Lista* no){
-    Lista* escolhido = NULL;
     if (no == NULL){
         return NULL;
     }
-    else{
-        while (no != NULL){
-            if (strcmp(no->nome, nome) == 0){
-                escolhido = no;
-            }
-            no = no->prox;
+    while (no != NULL){
+        if (strcmp(no->nome, nome) == 0){
+            return no;
         }
+        no = no->prox;
     }
-    return escolhido;
-
+    return NULL;
 }
 
 Lista* remove_por_nome(char* nome, Lista* no){
-
-    Lista* aux_no = no;
     Lista* escolhido = procura_por_nome(nome, no);
     if (escolhido == NULL){
         return no;
     }
     if (escolhido == no){
-        aux_no = no->prox;
+        Lista* prox_no = no->prox;
         free(escolhido);
-        aux_no->ant = NULL;
-        return aux_no;
+        if (prox_no != NULL) {
+            prox_no->ant = NULL;
+        }
+        return prox_no;
     }
-
     else{
-        (escolhido->ant)->prox = escolhido->prox;
+        if (escolhido->ant != NULL) {
+            escolhido->ant->prox = escolhido->prox;
+        }
         if (escolhido->prox != NULL){
-            (escolhido->prox)->ant = escolhido->ant;
+            escolhido->prox->ant = escolhido->ant;
         }
         free(escolhido);
         return no;
@@ -95,13 +92,11 @@ void libera_lista(Lista *no){
 void mostra_lista(Lista* no){
     if (no == NULL){
         printf("LISTA VAZIA\n");
+        return;
     }
-    else{
-        do {
-            printf("NOME: %s\n", no->nome);
-            printf("NUMERO: %d\n\n", no->numero);
-            no = no->prox;
-        } while (no != NULL);
+    while (no != NULL){
+        printf("NOME: %s\n", no->nome);
+        printf("NUMERO: %d\n\n", no->numero);
+        no = no->prox;
     }
-
 }
