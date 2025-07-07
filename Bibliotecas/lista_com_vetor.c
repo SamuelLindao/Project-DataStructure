@@ -47,7 +47,7 @@ void libera_lista(Lista *lista){
     lista->tam = 0;
     lista->capacidade = 0;
 }
-void exibirLista(Lista *lista){
+void exibir_lista(Lista *lista){
     for(int i = 0;i<lista->tam;i++){
         printf("%2d ",lista->itens[i]);
     }printf("\n");

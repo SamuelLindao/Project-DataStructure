@@ -61,6 +61,6 @@ void libera_lista(Lista *lista);
  *
  * @param lista Ponteiro da lista que será exibida.
  */
-void exibirLista(Lista *lista);
+void exibir_lista(Lista *lista);
 
 #endif
