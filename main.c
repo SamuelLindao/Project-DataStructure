@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-// Incluindo os headers
 #include "lista_com_vetor.h"
-#include "listadupla.h"
+#include "lista_dupla.h"
 #include "fila_de_prioridade.h"
-#include "mergesort.h"
-#include "quicksort.h"
+#include "merge_sort.h"
+#include "quick_sort.h"
 #include "arvore_AVL.h"
 
 // Função de teste: Lista com vetor
@@ -119,7 +117,7 @@ void testar_arvore_AVL() {
     int op, valor;
 
     do {
-        printf("\n--- ÁRVORE AVL ---\n");
+        printf("\n--- ARVORE AVL ---\n");
         printf("1 - Inserir\n2 - Remover\n3 - Exibir em ordem\n0 - Sair\nEscolha: ");
         scanf("%d", &op);
 
@@ -179,8 +177,8 @@ int main() {
         printf("1 - Testar Lista com Vetor\n");
         printf("2 - Testar Lista Dupla\n");
         printf("3 - Testar Fila de Prioridade\n");
-        printf("4 - Testar Ordenações (Merge/Quick)\n");
-        printf("5 - Testar Árvore AVL\n");
+        printf("4 - Testar Ordenacoes (Merge/Quick)\n");
+        printf("5 - Testar Arvore AVL\n");
         printf("0 - Sair\nEscolha: ");
         scanf("%d", &op);
 

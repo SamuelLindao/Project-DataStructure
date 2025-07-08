@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "listadupla.h"
+#include "lista_dupla.h"
 
 ListaD* insere_comeco(char* nome, int numero, ListaD* no){
     ListaD* novo_no = (ListaD*)malloc(sizeof(ListaD));
